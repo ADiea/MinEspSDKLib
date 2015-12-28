@@ -1,6 +1,10 @@
 #ifndef _sdk_config_h_
 #define _sdk_config_h_
 
+#ifndef USE_ESPCONN
+#define USE_ESPCONN 1
+#endif
+
 #define DEF_SDK_VERSION 1410 // 1302 // ver 1.3.0 + patch (lib_1.3.0_deep_sleep_plus_freq_offset_plus_freedom_callback_02.zip SDK ver: 1.3.0 compiled @ Aug 19 2015 17:50:07)
 #define SDK_VERSION_TXT "1.4.1"
 
@@ -21,9 +25,9 @@
 // #define USE_OPEN_LWIP 140 // использовать OpenLwIP 1.4.0 (назначается в app/MakeFile #USE_OPEN_LWIP = 140)
 // #define USE_OPEN_DHCPS 1	 // использовать исходник или либу из SDK (назначается в app/MakeFile #USE_OPEN_DHCP = 1)
 
-#ifndef USE_MAX_IRAM
-	#define USE_MAX_IRAM  48 // использовать часть cache под IRAM, IRAM size = 49152 байт
-#endif
+//#ifndef USE_MAX_IRAM
+//	#define USE_MAX_IRAM  48 // использовать часть cache под IRAM, IRAM size = 49152 байт
+//#endif
 
 /* USE_FIX_SDK_FLASH_SIZE - включена "песочница" для SDK в 512 килобайт flash. */
 //#define USE_FIX_SDK_FLASH_SIZE  
@@ -43,9 +47,9 @@
 
 //#define USE_OVERLAP_MODE // используются две и более flash
 
-#ifndef USE_OPTIMIZE_PRINTF
-	#define USE_OPTIMIZE_PRINTF
-#endif
+//#ifndef USE_OPTIMIZE_PRINTF
+//	#define USE_OPTIMIZE_PRINTF
+//#endif
 
 #ifndef USE_US_TIMER
 	#define USE_US_TIMER
