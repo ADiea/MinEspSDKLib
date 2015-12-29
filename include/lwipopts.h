@@ -1880,7 +1880,7 @@ TCP_SYNMAXRTX                   (*(volatile uint32*)0x600011E4) // = 6 (init.c)
  * NETIF_DEBUG: Enable debugging in netif.c.
  */
 #ifndef NETIF_DEBUG
-#define NETIF_DEBUG                     LWIP_DBG_OFF
+#define NETIF_DEBUG                     (LWIP_DBG_LEVEL_ALL | LWIP_DBG_ON)
 #endif
 
 /**
@@ -1950,28 +1950,28 @@ TCP_SYNMAXRTX                   (*(volatile uint32*)0x600011E4) // = 6 (init.c)
  * RAW_DEBUG: Enable debugging in raw.c.
  */
 #ifndef RAW_DEBUG
-#define RAW_DEBUG                       LWIP_DBG_OFF
+#define RAW_DEBUG                       (LWIP_DBG_LEVEL_ALL | LWIP_DBG_ON)
 #endif
 
 /**
  * MEM_DEBUG: Enable debugging in mem.c.
  */
 #ifndef MEM_DEBUG
-#define MEM_DEBUG                       LWIP_DBG_OFF
+#define MEM_DEBUG                       (LWIP_DBG_LEVEL_ALL | LWIP_DBG_ON)
 #endif
 
 /**
  * MEMP_DEBUG: Enable debugging in memp.c.
  */
 #ifndef MEMP_DEBUG
-#define MEMP_DEBUG                      LWIP_DBG_OFF
+#define MEMP_DEBUG                      (LWIP_DBG_LEVEL_ALL | LWIP_DBG_ON)
 #endif
 
 /**
  * SYS_DEBUG: Enable debugging in sys.c.
  */
 #ifndef SYS_DEBUG
-#define SYS_DEBUG                       (LWIP_DBG_LEVEL_ALL | LWIP_DBG_ON)
+#define SYS_DEBUG                       LWIP_DBG_OFF
 #endif
 
 /**
@@ -1992,7 +1992,7 @@ TCP_SYNMAXRTX                   (*(volatile uint32*)0x600011E4) // = 6 (init.c)
  * TCP_INPUT_DEBUG: Enable debugging in tcp_in.c for incoming debug.
  */
 #ifndef TCP_INPUT_DEBUG
-#define TCP_INPUT_DEBUG                 (LWIP_DBG_LEVEL_ALL | LWIP_DBG_ON)
+#define TCP_INPUT_DEBUG                 LWIP_DBG_OFF
 #endif
 
 /**
@@ -2028,7 +2028,7 @@ TCP_SYNMAXRTX                   (*(volatile uint32*)0x600011E4) // = 6 (init.c)
  * TCP_OUTPUT_DEBUG: Enable debugging in tcp_out.c output functions.
  */
 #ifndef TCP_OUTPUT_DEBUG
-#define TCP_OUTPUT_DEBUG                (LWIP_DBG_LEVEL_ALL | LWIP_DBG_ON)
+#define TCP_OUTPUT_DEBUG                LWIP_DBG_OFF
 #endif
 
 /**
